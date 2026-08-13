@@ -5,7 +5,7 @@ user_name = input("Привет! Я FitLife, как тебя зовут?\n").tit
 
 while True:
     try:
-        user_age = int(input(f"Сколько тебе лет?\n"))
+        user_age = int(input("Сколько тебе лет?\n"))
 
         if user_age < 0:
             print("Возраст не может быть отрицательным. Попробуй ещё раз!")
@@ -53,14 +53,8 @@ def water_ml(weight):
 b_m_i = bmi(user_weight, user_height)
 water_needed = water_ml(user_weight)
 
-print(
-    f"Отчёт о пользователе: {user_name} ({user_age} г.)"
-    )
-print(
-    f"Твой индекс массы тела: {b_m_i}"
-    )
-print(
-    f"Рекомендованная норма воды в день: {water_needed} мл, {water_needed / 1000} л."
-    )
+print(f"О пользователе: {user_name} ({user_age} г.)")
+print(f"Твой индекс массы тела: {b_m_i}")
+print(f"Ваша норма воды в день: {water_needed} мл, {water_needed / 1000} л.")
 
 print(f"Расчёт завершён, {user_name}! Будь здоров!")
