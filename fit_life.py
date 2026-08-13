@@ -1,8 +1,8 @@
 # Проект FitLife - MVP версия 1.0
 WATER_PER_KG = 30
 
-
 user_name = input("Привет! Давай знакомиться. Я FitLife, а как тебя зовут?\n").title()
+
 while True:
     try:
         user_age = int(input(f"Приятно познакомиться, {user_name}, сколько тебе лет?\n"))
@@ -39,14 +39,18 @@ while True:
     except ValueError:
         print("Похоже, ты ввёл не число. Попробуй ещё раз!")    
 
+
 def bmi(weight, height): #calc of body mass index
     return round(weight / (height ** 2), 1)
+
 
 def water_ml(weight): #calc of the water norm (in ml)
     return weight * WATER_PER_KG
 
+water_nedeed = water_ml(user_weight)
+
 print(f"Отчёт о пользователе: {user_name} ({user_age} г.)")
 print(f"Твой индекс массы тела: {bmi(user_weight, user_height)}")
-print(f"Рекомендованная норма воды в день: {water_ml(user_weight)} мл, {water_ml(user_weight) / 1000} л. \n")
+print(f"Рекомендованная норма воды в день: {water_nedeed} мл, {water_nedeed / 1000} л. \n")
 
 print(f"Расчёт завершён, {user_name}! Будь здоров!")
