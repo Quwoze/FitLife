@@ -41,6 +41,7 @@ while True:
 
 
 def bmi(weight, height):  #  calc of body mass index
+    """Рассчитывает индекс массы тела (ИМТ) и округляет до 1 знака."""
     return round(weight / (height ** 2), 1)
 
 def water_ml(weight):  #  calc of the water norm (in ml)
