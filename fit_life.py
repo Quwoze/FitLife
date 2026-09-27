@@ -52,9 +52,15 @@ def water_ml(weight):
 
 b_m_i = bmi(user_weight, user_height)
 water_needed = water_ml(user_weight)
+water_litres = water_needed / 1000
 
 print(f"О пользователе: {user_name} ({user_age} г.)")
 print(f"Твой индекс массы тела: {b_m_i}")
-print(f"Ваша норма воды в день: {water_needed} мл, {water_needed / 1000} л.")
+print(f"Ваша норма воды в день: {water_needed} мл, {water_litres:.1f} л.")
 
-print(f"Расчёт завершён, {user_name}! Будь здоров!")
+print(
+    "Расчёт завершён,",
+    f"{user_name}!",
+    "Будь здоров!",
+    sep='\n'
+)
